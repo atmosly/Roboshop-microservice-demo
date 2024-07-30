@@ -7,9 +7,9 @@ RUN apt-get update && apt-get -y install maven
 
 WORKDIR /opt/shipping
 
-COPY pom.xml /opt/shipping/
+COPY atmosly-shipping/pom.xml /opt/shipping/
 RUN mvn dependency:resolve
-COPY src /opt/shipping/src/
+COPY atmosly-shipping/src /opt/shipping/src/
 RUN mvn package
 
 #

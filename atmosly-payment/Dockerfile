@@ -7,12 +7,12 @@ ENV INSTANA_SERVICE_NAME=payment
 
 WORKDIR /app
 
-COPY requirements.txt /app/
+COPY atmosly-payment/requirements.txt /app/
 
 RUN pip install -r requirements.txt
 
-COPY *.py /app/
-COPY payment.ini /app/
+COPY atmosly-payment/*.py /app/
+COPY atmosly-payment/payment.ini /app/
 
 #CMD ["python", "payment.py"]
 CMD ["uwsgi", "--ini", "payment.ini"]

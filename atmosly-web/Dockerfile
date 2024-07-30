@@ -36,8 +36,8 @@ ENV CATALOGUE_HOST=catalogue \
 # Instana tracing
 COPY --from=build /instana/*.so /tmp/
 
-COPY entrypoint.sh /root/
+COPY atmosly-web/entrypoint.sh /root/
 ENTRYPOINT ["/root/entrypoint.sh"]
 
-COPY default.conf.template /etc/nginx/conf.d/default.conf.template
-COPY static /usr/share/nginx/html
+COPY atmosly-web/default.conf.template /etc/nginx/conf.d/default.conf.template
+COPY atmosly-web/static /usr/share/nginx/html
