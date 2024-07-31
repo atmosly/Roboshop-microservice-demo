@@ -3,7 +3,7 @@ FROM python:3.9
 # Some default values
 ENV HOST="https://rb.test.atmosly.in/" \
     SILENT=0 \
-    NUM_CLIENTS=80 \
+    NUM_CLIENTS=200 \
     ERROR=0 \
     RUN_TIME=0
     
